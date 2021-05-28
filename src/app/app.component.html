@@ -1,0 +1,16 @@
+<div class="wrapping-box-container">
+  <div id="controls" class="controls">
+      <!-- Button that will begin a Liveness Check -->
+      <button id="liveness-button" disabled (click)="onLivenessCheckPressed()" class="big-button">3D Liveness Check</button>
+      <!-- Button that will begin a Photo ID Match -->
+      <button id="photo-id-match-button" disabled (click)="onPhotoIdMatchPressed()" class="big-button">Photo ID Match</button>
+
+      <!-- <button id="design-showcase-button" disabled (click)="onDesignShowcasePressed()" class="medium-button">Design Showcase</button> -->
+
+      <!-- The status container that will be updated appropriately based on current state of FaceTecSDK -->
+      <p id="status">Initializing...</p>
+  </div>
+  <div id="custom-logo-container">
+    <img class="facetec-logo" src="src/core-sdk/FaceTec_images/FaceTec_your_app_logo.png">
+  </div>
+</div>
