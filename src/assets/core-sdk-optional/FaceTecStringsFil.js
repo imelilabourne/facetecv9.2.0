@@ -1,19 +1,19 @@
-var FaceTecStrings = {
+var FaceTecStringsFil = {
   "FaceTec_accessibility_cancel_button": "Cancel",
 
-  "FaceTec_feedback_center_face": "Center Your Face",
-  "FaceTec_feedback_face_not_found": "Frame Your Face",
-  "FaceTec_feedback_move_phone_away": "Move Away",
-  "FaceTec_feedback_move_away_web": "Move Away",
-  "FaceTec_feedback_move_phone_closer": "Move Closer",
+  "FaceTec_feedback_center_face": "I-gitna Ang Mukha",
+  "FaceTec_feedback_face_not_found": "I-Sakto Ang Mukha",
+  "FaceTec_feedback_move_phone_away": "Lumayo Pa",
+  "FaceTec_feedback_move_away_web": "Lumayo Pa",
+  "FaceTec_feedback_move_phone_closer": "Lumapit Pa",
   "FaceTec_feedback_move_phone_to_eye_level": "Move Phone To Eye Level",
   "FaceTec_feedback_move_to_eye_level_web": "Look Straight Into Camera",
   "FaceTec_feedback_face_not_looking_straight_ahead": "Look Straight Ahead",
   "FaceTec_feedback_face_not_upright": "Hold Your Head Straight",
   "FaceTec_feedback_face_not_upright_mobile": "Keep Head Straight",
-  "FaceTec_feedback_hold_steady": "Hold Steady",
-  "FaceTec_feedback_move_web_closer": "Move Face Closer & Fill Oval",
-  "FaceTec_feedback_move_web_even_closer": "Even Closer",
+  "FaceTec_feedback_hold_steady": "Huwag Gumalaw",
+  "FaceTec_feedback_move_web_closer": "Move Face Closer Bhie & Fill Oval",
+  "FaceTec_feedback_move_web_even_closer": "Mas Malapit Konti",
   "FaceTec_feedback_use_even_lighting": "Light Face More Evenly",
 
   "FaceTec_instructions_header_ready_desktop": "Get Ready For Your Video Selfie",
@@ -23,7 +23,7 @@ var FaceTecStrings = {
   "FaceTec_instructions_message_ready_1_mobile": "Frame Your Face in the Oval,",
   "FaceTec_instructions_message_ready_2_mobile": "Press I'm Ready & Move Closer",
 
-  "FaceTec_action_im_ready": "I'M READY",
+  "FaceTec_action_im_ready": "READY NA",
   "FaceTec_presession_frame_your_face": "Frame Your Face In The Oval",
   "FaceTec_presession_look_straight_ahead": "Look Straight Ahead",
   "FaceTec_presession_hold_steady3": "Hold Steady for: 3",
@@ -92,4 +92,4 @@ var FaceTecStrings = {
   "FaceTec_result_success_message": "Success!"
 };
 
-module.exports = FaceTecStrings;
+module.exports = FaceTecStringsFil;

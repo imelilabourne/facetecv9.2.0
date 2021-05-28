@@ -63,6 +63,24 @@
     outline: none;
   }
 
+  .translate-btn {
+    width: 40%;
+    height: 40px;
+    margin: 10px auto 0;
+    color: white;
+    background: rgb(117, 122, 118);
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .translate-btn:hover {
+    background-color: rgb(153, 151, 151);
+    color: rgb(0, 0, 0);
+  }
   .medium-button {
     width: 40%;
     height: 30px;

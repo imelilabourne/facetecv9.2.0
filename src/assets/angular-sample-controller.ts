@@ -2,6 +2,7 @@ import { FaceTecIDScanResult, FaceTecSessionResult } from "../assets/core-sdk/Fa
 import { FaceTecSDK } from "../assets/core-sdk/FaceTecSDK.js/FaceTecSDK";
 import { Config } from "./Config";
 import FacetecStrings from './core-sdk-optional/FacetecStrings';
+import FacetecStringsFil from './core-sdk-optional/FacetecStringsFil';
 import { LivenessCheckProcessor } from "./processors/LivenessCheckProcessor";
 import { PhotoIDMatchProcessor } from "./processors/PhotoIDMatchProcessor";
 import { SampleAppUtilities } from "./utilities/SampleAppUtilities";
@@ -11,7 +12,7 @@ export const AngularSampleApp = (function() {
   let latestSessionResult: FaceTecSessionResult | null = null;
   let latestIDScanResult: FaceTecIDScanResult | null = null;
   let latestProcessor: LivenessCheckProcessor;
-
+  let language = 'English';
   // Wait for onload to be complete before attempting to access the Browser SDK.
   window.onload = function() {
 
@@ -29,6 +30,8 @@ export const AngularSampleApp = (function() {
       if(initializedSuccessfully) {
         SampleAppUtilities.enableControlButtons();
         FaceTecSDK.configureLocalization(FacetecStrings);
+
+
 
       }
       SampleAppUtilities.displayStatus(FaceTecSDK.getFriendlyDescriptionForFaceTecSDKStatus(FaceTecSDK.getStatus()));
@@ -50,7 +53,13 @@ export const AngularSampleApp = (function() {
     // Perform a 3D Liveness Check, then an ID Scan, then Match the 3D FaceMap to the ID Scan.
   function onPhotoIDMatchPressed() {
     SampleAppUtilities.fadeOutMainUIAndPrepareForSession();
-
+    console.log(this.language);
+    
+    if(this.language === 'English'){
+      FaceTecSDK.configureLocalization(FacetecStrings);
+    }else{
+      FaceTecSDK.configureLocalization(FacetecStringsFil);
+    }
     // Get a Session Token from the FaceTec SDK, then start the 3D Liveness Check.  On Success, ID Scanning will start automatically.
     getSessionToken(function(sessionToken) {
       latestEnrollmentIdentifier = "browser_sample_app_" + SampleAppUtilities.generateUUId();
@@ -144,7 +153,8 @@ export const AngularSampleApp = (function() {
     setLatestIDScanResult,
     getLatestEnrollmentIdentifier,
     setLatestServerResult,
-    clearLatestEnrollmentIdentifier
+    clearLatestEnrollmentIdentifier,
+    language
   };
 
 })();

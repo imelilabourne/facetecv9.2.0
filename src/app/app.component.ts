@@ -9,8 +9,9 @@ import { AngularSampleApp } from "../assets/angular-sample-controller";
 
 
 export class AppComponent implements OnInit {
-  constructor() {}
 
+  constructor() {}
+  buttonName = AngularSampleApp.language;
   ngOnInit(): void {
 
   }
@@ -22,6 +23,16 @@ export class AppComponent implements OnInit {
 
   onPhotoIdMatchPressed() {
     AngularSampleApp.onPhotoIDMatchPressed();
+  }
+
+  translate(){
+    if(AngularSampleApp.language === "English"){
+      AngularSampleApp.language = "Filipino"
+    }else{
+      AngularSampleApp.language = "English"
+    }
+
+    this.buttonName = AngularSampleApp.language;
   }
 
 }
